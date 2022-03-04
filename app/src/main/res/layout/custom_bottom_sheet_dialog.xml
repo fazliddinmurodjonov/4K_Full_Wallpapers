@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20sp"
+        >
+
+        <io.alterac.blurkit.BlurLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:blk_blurRadius="15"
+            app:blk_downscaleFactor="0.6"
+            app:blk_fps="60" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#40FFFFFF"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/webSite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/inter_light"
+                android:text="Website: Unsplash.com/aftad"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/inter_light"
+                android:text="Author: Anton Makareno"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/download"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/inter_light"
+                android:text="Download: 1234441"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/size"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/inter_light"
+                android:text="Size: 3,4MB, 2300x4000"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

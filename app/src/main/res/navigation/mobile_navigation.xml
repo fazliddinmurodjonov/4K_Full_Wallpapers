@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.androidhardviewlesson10.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_fr_to_recyclerView_Fragment"
+            app:destination="@id/recyclerView_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_popular"
+        android:name="com.example.androidhardviewlesson10.ui.PopularFragment"
+        android:label="Popular"
+        tools:layout="@layout/fragment_popular" >
+        <action
+            android:id="@+id/action_nav_popular_fr_to_recyclerView_Fragment"
+            app:destination="@id/recyclerView_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_random"
+        android:name="com.example.androidhardviewlesson10.ui.RandomFragment"
+        android:label="Random"
+        tools:layout="@layout/fragment_random" />
+    <fragment
+        android:id="@+id/nav_liked"
+        android:name="com.example.androidhardviewlesson10.ui.LikedFragment"
+        android:label="Liked"
+        tools:layout="@layout/fragment_liked" >
+        <action
+            android:id="@+id/action_nav_liked_to_nav_home2"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.example.androidhardviewlesson10.ui.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.androidhardviewlesson10.ui.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/recyclerView_Fragment"
+        android:name="com.example.androidhardviewlesson10.RecyclerView_Fragment"
+        android:label="fragment_recycler_view_"
+        tools:layout="@layout/fragment_recycler_view_" >
+        <action
+            android:id="@+id/action_recyclerView_Fragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.example.androidhardviewlesson10.ui.ImageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image" >
+        <action
+            android:id="@+id/action_imageFragment_to_setImageFragment"
+            app:destination="@id/setImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setImageFragment"
+        android:name="com.example.androidhardviewlesson10.SetImageFragment"
+        android:label="fragment_set_image"
+        tools:layout="@layout/fragment_set_image" />
+</navigation>
